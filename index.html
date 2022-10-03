@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Interview-Classes-REACT-Day6</title>
+</head>
+<body>
+    <div class="App">
+        <h1>Interview-Classes-REACT-Day6</h1>
+        <h2>Q1. What is an event in react ?</h2>
+        <h3>Ans- Event in react-</h3>
+        <p>An event is an action that could be triggered as a result of the user action or system generated event. For example, a mouse click, loading of a web page, pressing a key, window resizes, and other interactions are called events.</p>
+        <p>React has its own event handling system which is very similar to handling events on DOM elements. The react event handling system is known as Synthetic Events. The synthetic event is a cross-browser wrapper of the browser's native event.</p>
+        <p>Handling events with react have some syntactic differences from handling events on DOM. These are:</p>
+        <ul>
+            <li>React events are named as camelCase instead of lowercase.</li>
+            <li>With JSX, a function is passed as the event handler instead of a string.</li>
+        </ul>
+        <hr>
+        <h2>Q2. What is memory leak and how to overcome ?</h2>
+        <h3>Ans- Memory leak-</h3>
+        <p>Memory Leak Issue is the first step toward the lower performance of the project. So we need to take care of memory while developing the project.</p>
+        <p>The main reason for the memory leak issue is updating the state endlessly.</p>
+        <p>The memory leak will happen if the API server or host took some time to respond and the component was unmounted before the response was received. Though the component was unmounted, the response to the request will still be received on completion. The response will then be parsed and setData will be called.</p><p>To eliminate this issue there are some methods to clean the effect. Some of them are:</p>
+        <ol>
+            <li>Boolean Flag to Control the useEffect</li>
+            <li>AbortController to clean the useEffect</li>
+            <li>useStateSafe hook can also be used</li>
+        </ol>
+        <hr>
+        <h2>Q3. Do you prefer function-based or class component and why ?</h2>
+        <h3>Ans- With React version 16.8,Functional Components are preferred over Class Components.</h3>
+        <ol>
+            <li>Functional components are more concise, leading to cleaner, less complex code. They do not include lifecycle methods or inherited members that may or may not be required for code functionality.</li>
+            <li>Anything that can be done using class components can also be done using functional components. (The only exception is that React supports a special class component called Error Boundaries that cannot be duplicated as a function component.)</li>
+            <li>Class components have state and lifecycle methods associated with them, so you must understand when lifecycle events will occur and how to respond to them to manage state.</li>
+            <li>Classes also require additional setup for the component or to make API calls for data, primarily implemented via the constructor.</li>
+            <li>Sharing logic between multiple class objects without implementing design patterns is more difficult, leading to code that is more complex and difficult to maintain.</li>
+        </ol>
+        <hr>
+        <h2>Q4. Explain reducer as pure function in redux.</h2>
+        <h3>Ans- Reducer as pure function in redux-</h3>
+        <p>In Redux, a reducer is a pure function that takes an action and the previous state of the application and returns the new state. The action describes what happened and it is the reducer's job to return the new state based on that action.</p>
+        <p>Syntax: </p>
+        <pre>(State,action) => newState</pre>
+        <p>Pure functions can't do any of the following:</p>
+        <ol>
+            <li>Mutate its arguments</li>
+            <li>Access global variables</li>
+            <li>Change global variables</li>
+            <li>Perform side effects (like make API calls)</li>
+            <li>Call any other impure function (like date and random functions)</li>
+        </ol>
+        <hr>
+        <h2>Q5. Why do we use redux thunk ?</h2>
+        <h3>Ans- Redux thunk-</h3>
+        <p>The most common use case for Redux Thunk is for communicating asynchronously with an external API to retrieve or save data. Redux Thunk makes it easy to dispatch actions that follow the lifecycle of a request to an external API. Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises. One of the main use cases for this middleware is for handling actions that might not be synchronous, for example, using axios to send a GET request.</p>
+        <p>The function returned from action is called a thunk function which is called with two arguments :</p>
+        <ol>
+            <li>dispatch: It is a method used to dispatch actions, that can be received by reducers.</li>
+            <li> getState: It gives access to store inside the thunk function.</li>
+        </ol>
+        <hr>
+        <h2>Q6. What do you know about NPM ?</h2>
+        <h3>Ans- NPM(Node Package Module)-</h3>
+        <p>It is a package manager for JavaScript. It is the default package manager that comes with NodeJS when you install it. It consists of a command-line interface and an online database of public packages and private packages that are paid which is called the npm Registry.</p>
+    </div>
+</body>
+</html>
